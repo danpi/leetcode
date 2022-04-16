@@ -7,7 +7,7 @@ Array 实战题目
 • https://leetcode-cn.com/problems/3sum/ (高频老题）  
 
 Linked List 实战题目  
-• ([206]反转链表)https://leetcode.com/problems/reverse-linked-list/  
+• (*[206]反转链表)https://leetcode.com/problems/reverse-linked-list/  
 • [160]相交链表    
 • https://leetcode.com/problems/swap-nodes-in-pairs  
 • ([141]环形链表)https://leetcode.com/problems/linked-list-cycle  

@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * PACKAGE_NAME
  * main
@@ -8,16 +11,11 @@
 
 public class Main {
     public static void main(String[] args) {
-        ListNode head = new ListNode(3);
-        ListNode n2 = new ListNode(2);
-        head.next = n2;
-        ListNode n3 = new ListNode(0);
-        n2.next = n3;
-        ListNode n4 = new ListNode(4);
-        n3.next = n4;
-        n4.next = n2;
-        ListDemo listDemo = new ListDemo();
-        ListNode ret = listDemo.detectCycle(head);
-        System.out.println(ret.getVal());
+        ListNode node1 = new ListNode(1);
+        ListNode node2 = new ListNode(2);
+        node1.next = node2;
+        node2.next = null;
+        ListDemo demo = new ListDemo();
+        System.out.println(demo.hasCycle(node1));
     }
 }
