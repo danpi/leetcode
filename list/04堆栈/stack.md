@@ -2,7 +2,7 @@
 • ([20]有效的括号)https://leetcode-cn.com/problems/valid-parentheses/  
 • https://leetcode-cn.com/problems/min-stack/  
 实战题目  
-• ([84]柱状图中最大的矩形)https://leetcode-cn.com/problems/largest-rectangle-in-histogram  
+• (*[84]柱状图中最大的矩形)https://leetcode-cn.com/problems/largest-rectangle-in-histogram  
 • ([239]滑动窗口最大值)https://leetcode-cn.com/problems/sliding-window-maximum  
 课后作业  
 • 用 add first 或 add last 这套新的 API 改写 Deque 的代码  
