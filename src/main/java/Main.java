@@ -1,3 +1,4 @@
+import framework.bfs.OpenLock;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -17,5 +18,9 @@ public class Main {
         node2.next = null;
         ListDemo demo = new ListDemo();
         System.out.println(demo.hasCycle(node1));
+
+        OpenLock lock = new OpenLock();
+        String[] deadends = new String[]{"0201", "0101", "0102", "1212", "2002"};
+        System.out.println(lock.openLock(deadends,"0202"));
     }
 }
