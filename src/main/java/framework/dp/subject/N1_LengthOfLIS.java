@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class N1_LengthOfLIS {
     public int lengthOfLIS(int[] nums) {
-        int[] dp = new int[];
+        int[] dp = new int[nums.length];
         Arrays.fill(dp, 1);
         for (int i = 0; i < dp.length; i++) {
             for (int j = 0; j < i; j++) {

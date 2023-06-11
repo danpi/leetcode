@@ -1,6 +1,10 @@
+import common.TreeNode;
+import exercise.Solution;
 import framework.bfs.OpenLock;
 import java.util.LinkedList;
 import java.util.List;
+import structrue.N1_LRUCache;
+import structrue.N5_codec;
 
 /**
  * PACKAGE_NAME
@@ -12,15 +16,10 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        ListNode node1 = new ListNode(1);
-        ListNode node2 = new ListNode(2);
-        node1.next = node2;
-        node2.next = null;
-        ListDemo demo = new ListDemo();
-        System.out.println(demo.hasCycle(node1));
+        N5_codec codec = new N5_codec();
+        String data = "[1,2,null,4,null,null,3,null,null]";
+        TreeNode root = codec.deserialize(data);
+        System.out.println(codec.serialize(root));
 
-        OpenLock lock = new OpenLock();
-        String[] deadends = new String[]{"0201", "0101", "0102", "1212", "2002"};
-        System.out.println(lock.openLock(deadends,"0202"));
     }
 }
