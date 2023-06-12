@@ -1,10 +1,6 @@
 import common.TreeNode;
-import exercise.Solution;
-import framework.bfs.OpenLock;
-import java.util.LinkedList;
-import java.util.List;
-import structrue.N1_LRUCache;
-import structrue.N5_codec;
+import structrue_ch3.N5_codec;
+import thinking_ch4.N6_nsum;
 
 /**
  * PACKAGE_NAME
@@ -16,10 +12,20 @@ import structrue.N5_codec;
 
 public class Main {
     public static void main(String[] args) {
-        N5_codec codec = new N5_codec();
-        String data = "[1,2,null,4,null,null,3,null,null]";
-        TreeNode root = codec.deserialize(data);
-        System.out.println(codec.serialize(root));
+        N6_nsum sum = new N6_nsum();
+        int[] nums = new int[]{1, 3, 1, 2, 2, 3};
+        System.out.println(sum.twoSum(nums, 4));
+
+        nums = new int[]{-1, 0, 1, 2, -1, -4};
+        System.out.println(sum.threeSum(nums));
+        System.out.println("nsum");
+        System.out.println(sum.nSum(nums, 0));
+        int x = 1000000000;
+        int y = -294967296;
+        System.out.println(y - x - x);
+        nums = new int[]{1000000000, 1000000000, 1000000000, 1000000000};
+        System.out.println(sum.fourSum(nums, -294967296));
+
 
     }
 }
