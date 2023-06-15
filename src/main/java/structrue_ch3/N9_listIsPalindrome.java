@@ -1,7 +1,7 @@
 package structrue_ch3;
 
 import common.ListNode;
-
+//https://leetcode.cn/problems/palindrome-linked-list/
 public class N9_listIsPalindrome {
     public boolean isPalindrome(ListNode head) {
         //找到中间节点
