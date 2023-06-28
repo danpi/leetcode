@@ -1,8 +1,14 @@
 import common.TreeNode;
+import exercise.Solution;
 import interview_ch5.N2_mod;
 import interview_ch5.N3_binarySearch;
 import interview_ch5.N8_intervalSchedule;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Vector;
+import java.util.concurrent.atomic.AtomicInteger;
 import structrue_ch3.N5_codec;
+import thinking_ch4.N1_subset;
 import thinking_ch4.N6_nsum;
 
 /**
@@ -15,8 +21,7 @@ import thinking_ch4.N6_nsum;
 
 public class Main {
     public static void main(String[] args) {
-        N8_intervalSchedule ans = new N8_intervalSchedule();
-        int[][] point = {{-2147483646, -2147483645}, {2147483646, 2147483647}};
-        System.out.println(ans.findMinArrowShots(point));
+        Solution solution = new Solution();
+        System.out.println(solution.decodeString("3[a]2[bc]"));
     }
 }

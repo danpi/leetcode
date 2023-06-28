@@ -9,26 +9,26 @@ public class MinDepth {
         if (root == null) {
             return 0;
         }
-        Queue<TreeNode> nodeQueue = new LinkedList<>();
-        nodeQueue.offer(root);
-        int depth = 1;
-        while (!nodeQueue.isEmpty()) {
-            int qSize = nodeQueue.size();
-            for (int i = 0; i < qSize; i++) {
-                TreeNode curNode = nodeQueue.poll();
-                if (curNode.getLeft() == null || curNode.getRight() == null) {
-                    return depth;
+        Queue<TreeNode> levelQ = new LinkedList<>();
+        int step = 1;
+        levelQ.offer(root);
+        while (!levelQ.isEmpty()) {
+            int sz = levelQ.size();
+            for (int i = 0; i < sz; i++) {
+                TreeNode cur = levelQ.poll();
+                if (cur.left == null && cur.right == null) {
+                    return step;
                 }
-                if (curNode.getLeft() != null) {
-                    nodeQueue.offer(curNode.getLeft());
+                if (cur.left != null) {
+                    levelQ.offer(cur.left);
                 }
-                if (curNode.getRight() != null) {
-                    nodeQueue.offer(curNode.getRight());
+                if (cur.right != null) {
+                    levelQ.offer(cur.right);
                 }
             }
-            depth++;
+            step++;
         }
-        return depth;
+        return step;
     }
 }
 
