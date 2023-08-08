@@ -19,25 +19,66 @@ import java.util.Map;
 import java.util.Queue;
 import java.util.Set;
 import java.util.Stack;
-import sun.jvm.hotspot.memory.UniverseExt;
+import javax.annotation.processing.SupportedSourceVersion;
 
 public class Solution {
-    public int lengthOfLIS(int[] nums) {
-        int n = nums.length;
-        int[] dp = new int[n];
-        Arrays.fill(dp, 1);
-        int maxLen = 0;
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < i; j++) {
-                if (nums[i] > nums[j]) {
-                    dp[i] = Math.max(dp[i], dp[j] + 1);
+    public int openLock(String[] deadends, String target) {
+        Queue<String> q = new LinkedList<>();
+        Set<String> visited = new HashSet<>();
+        Set<String> deadNumbers = new HashSet<>();
+        for (String deadNumber : deadends) {
+            deadNumbers.add(deadNumber);
+        }
+
+        String start = "0000";
+        q.add(start);
+        visited.add(start);
+        int step = 0;
+        while (!q.isEmpty()) {
+            int sz = q.size();
+            for (int i = 0; i < sz; i++) {
+                String cur = q.poll();
+                if (deadNumbers.contains(cur)) {
+                    continue;
+                }
+                if (cur.equals(target)) {
+                    return step;
+                }
+                for (int index = 0; index < 4; index++) {
+                    String plusStr = plusOne(cur, index);
+                    if (visited.contains(plusStr)) {
+                        q.offer(plusStr);
+                        visited.add(plusStr);
+                    }
+                    String minusStr = minusOne(cur, index);
+                    if (visited.contains(minusStr)) {
+                        q.offer(minusStr);
+                        visited.add(minusStr);
+                    }
                 }
             }
+            step++;
         }
-        for (int i = 0; i < n; i++) {
-            maxLen = Math.max(maxLen, dp[i]);
-        }
-        return maxLen;
+        return -1;
     }
 
+    String plusOne(String cur, int index) {
+        char[] curChars = new char[cur.length()];
+        if (curChars[index] == '9') {
+            curChars[index] = '0';
+        } else {
+            curChars[index] += 1;
+        }
+        return new String(curChars);
+    }
+
+    String minusOne(String cur, int index) {
+        char[] curChars = new char[cur.length()];
+        if (curChars[index] == '0') {
+            curChars[index] = '9';
+        } else {
+            curChars[index] -= 1;
+        }
+        return new String(curChars);
+    }
 }

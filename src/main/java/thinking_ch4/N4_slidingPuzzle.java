@@ -7,6 +7,7 @@ import java.util.Set;
 
 //https://leetcode.cn/problems/sliding-puzzle/
 public class N4_slidingPuzzle {
+
     /**
      * 最少步数一般用BFS,将二维数组降为一维
      */

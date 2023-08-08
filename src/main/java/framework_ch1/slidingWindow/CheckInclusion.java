@@ -2,7 +2,14 @@ package framework_ch1.slidingWindow;
 
 import java.util.HashMap;
 import java.util.Map;
+
 //字符串的排列
+
+/**
+ * 输入：s1 = "ab" s2 = "eidbaooo"
+ * 输出：true
+ * 解释：s2 包含 s1 的排列之一 ("ba").
+ */
 public class CheckInclusion {
     public boolean checkInclusion(String s1, String s2) {
         Map<Character, Integer> need = new HashMap<>();
