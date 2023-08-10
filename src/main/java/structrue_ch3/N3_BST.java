@@ -4,8 +4,42 @@ import common.TreeNode;
 
 /**
  * 搜索二叉树的插入，删除，节点个数
+ * Binary search tree（BST）
  */
 public class N3_BST {
+    //判断是否是BST
+    public boolean validBST(TreeNode root) {
+        return validBST(root, null, null);
+    }
+
+    private boolean validBST(TreeNode root, TreeNode min, TreeNode max) {
+        if (root == null) {
+            return true;
+        }
+        if (min != null && root.val <= min.val) {
+            return false;
+        }
+        if (max != null && root.val >= max.val) {
+            return false;
+        }
+        return validBST(root.left, min, root) && validBST(root.right, root, max);
+    }
+
+    public boolean isInBST(TreeNode root, int target) {
+        if (root == null) {
+            return false;
+        }
+        if (root.val == target) {
+            return true;
+        }
+        if (root.val < target) {
+            return isInBST(root.right, target);
+        }
+        if (root.val > target) {
+            return isInBST(root.left, target);
+        }
+    }
+
     //https://leetcode.cn/problems/insert-into-a-binary-search-tree/
     public TreeNode insertIntoBST(TreeNode root, int val) {
         if (root == null) {
@@ -23,7 +57,7 @@ public class N3_BST {
         return root;
     }
 
-    //
+    //删除节点
     public TreeNode deleteNode(TreeNode root, int key) {
         if (root == null) {
             return null;
@@ -87,7 +121,7 @@ public class N3_BST {
             hRight++;
         }
         if (hLeft == hRight) {
-            return (int) Math.pow(2, hLeft) -1;
+            return (int) Math.pow(2, hLeft) - 1;
         }
         return 1 + bstCountNodes(root.left) + bstCountNodes(root.right);
     }
