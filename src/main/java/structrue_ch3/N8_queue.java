@@ -7,6 +7,8 @@ import java.util.LinkedList;
  */
 //https://leetcode.cn/problems/sliding-window-maximum/submissions/
 public class N8_queue {
+
+
     public int[] maxSlidingWindow(int[] nums, int k) {
         int n = nums.length;
         MonotonicQueue window = new MonotonicQueue();

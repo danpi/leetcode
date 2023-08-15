@@ -1,11 +1,19 @@
 package structrue_ch3;
 
+import java.util.Arrays;
 import java.util.Stack;
+import java.util.function.BiFunction;
 
 /**
  * 解决了nextGreaterNumber问题
  */
 public class N7_stack {
+    public static void main(String[] args) {
+        int[] nums = new int[]{2, 1, 2, 4, 3};
+        N7_stack n7Stack = new N7_stack();
+        System.out.println(Arrays.toString(n7Stack.nextGreaterElements(nums)));
+    }
+
     //https://leetcode.cn/problems/next-greater-element-ii/
     //非循环
     public int[] nextGreaterElements(int[] nums) {

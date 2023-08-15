@@ -1,6 +1,7 @@
 package structrue_ch3;
 
 import common.TreeNode;
+
 //https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree
 //https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/solution/er-cha-shu-de-zui-jin-gong-gong-zu-xian-by-leetc-2/
 public class N6_longestCommonAncestor {
@@ -9,6 +10,24 @@ public class N6_longestCommonAncestor {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         this.dfs(root, p, q);
         return this.ans;
+    }
+
+    private TreeNode lca(TreeNode root, TreeNode p, TreeNode q) {
+        if (root == null) {
+            return null;
+        }
+        if (root == p || root == q) {
+            return root;
+        }
+        TreeNode left = lca(root.left, p, q);
+        TreeNode right = lca(root.right, p, q);
+        if (left != null && right != null) {
+            return root;
+        }
+        if (left == null && right == null) {
+            return null;
+        }
+        return left == null ? right : left;
     }
 
     private boolean dfs(TreeNode root, TreeNode p, TreeNode q) {

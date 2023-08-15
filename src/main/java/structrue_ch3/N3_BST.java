@@ -38,6 +38,7 @@ public class N3_BST {
         if (root.val > target) {
             return isInBST(root.left, target);
         }
+        return true;
     }
 
     //https://leetcode.cn/problems/insert-into-a-binary-search-tree/

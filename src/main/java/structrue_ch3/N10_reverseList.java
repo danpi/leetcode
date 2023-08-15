@@ -52,5 +52,4 @@ public class N10_reverseList {
         leftNode.next = next;
         return dummy.next;
     }
-
 }
