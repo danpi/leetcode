@@ -44,5 +44,18 @@ public class N2_mod {
         return res;
     }
 
+    //高效求幂运算
+    public int powAB(int a, int k) {
+        if (k == 0) {
+            return 1;
+        }
+        if (k % 2 == 1) {
+            //k为奇数
+            return a * (powAB(a, k - 1));
+        } else {
+            int sub = powAB(a, k / 2);
+            return sub * sub;
+        }
+    }
 
 }

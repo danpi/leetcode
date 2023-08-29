@@ -8,7 +8,7 @@ public class N3_binarySearch {
         int right = getMax(piles) + 1;
         while (left < right) {
             int mid = (right - left) / 2 + left;
-            if (canFinish(mid, piles, h)) {
+            if (canFinish(piles, mid, h)) {
                 right = mid;
             } else {
                 left = mid + 1;
@@ -17,15 +17,15 @@ public class N3_binarySearch {
         return left;
     }
 
-    private boolean canFinish(int speed, int[] piles, int h) {
-        long totalTime = 0;
-        for (int pile : piles) {
-            totalTime += timeWithSpeed(pile, speed);
+    boolean canFinish(int[] piles, int speed, int h) {
+        for (int v : piles) {
+            int time = v / speed + (v % speed == 0 ? 0 : 1);
+            h -= time;
+            if (h < 0) {
+                return false;
+            }
         }
-        if (totalTime <= h) {
-            return true;
-        }
-        return false;
+        return true;
     }
 
     private int timeWithSpeed(int n, int speed) {
