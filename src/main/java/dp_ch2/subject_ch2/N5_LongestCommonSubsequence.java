@@ -1,4 +1,4 @@
-package framework_ch1.dp.subject_ch2;
+package dp_ch2.subject_ch2;
 
 public class N5_LongestCommonSubsequence {
     public int longestCommonSubsequence(String text1, String text2) {

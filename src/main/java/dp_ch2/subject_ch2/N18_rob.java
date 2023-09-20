@@ -1,4 +1,4 @@
-package framework_ch1.dp.subject_ch2;
+package dp_ch2.subject_ch2;
 
 public class N18_rob {
     public int rob(int[] nums) {

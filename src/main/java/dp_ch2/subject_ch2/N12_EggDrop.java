@@ -1,4 +1,4 @@
-package framework_ch1.dp.subject_ch2;
+package dp_ch2.subject_ch2;
 
 import java.util.HashMap;
 import java.util.Map;

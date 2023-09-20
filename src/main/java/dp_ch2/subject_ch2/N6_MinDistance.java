@@ -1,4 +1,4 @@
-package framework_ch1.dp.subject_ch2;
+package dp_ch2.subject_ch2;
 
 public class N6_MinDistance {
     public int minDistance(String word1, String word2) {

@@ -1,4 +1,4 @@
-package framework_ch1.dp;
+package dp_ch2;
 
 import java.util.Arrays;
 import java.util.HashMap;
