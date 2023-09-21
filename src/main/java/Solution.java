@@ -1,3 +1,4 @@
+import concurrent.printnumber.ZeroEvenOdd;
 import java.util.*;
 
 /**
@@ -25,5 +26,9 @@ public class Solution {
             map.get(key).add(str);
         }
         return new ArrayList<>(map.values());
+    }
+
+    public static void main(String[] args) {
+
     }
 }

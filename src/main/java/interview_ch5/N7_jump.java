@@ -1,5 +1,6 @@
 package interview_ch5;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -58,5 +59,25 @@ public class N7_jump {
             }
         }
         return count;
+    }
+
+    //动归
+    int canJump3(int[] nums) {
+        int n = nums.length;
+        int[] dp = new int[n];
+        Arrays.fill(dp, n + 1);
+        dp[n - 2] = 1;
+        for (int i = n - 3; i >= 0; i--) {
+            if (nums[i] >= n - 1 - i) {
+                dp[i] = 1;
+                continue;
+            }
+            for (int j = 1; j <= nums[i]; j++) {
+                if (dp[i] > dp[i + j] + 1) {
+                    dp[i] = dp[i + j] + 1;
+                }
+            }
+        }
+        return dp[0];
     }
 }
