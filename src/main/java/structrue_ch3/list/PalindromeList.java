@@ -1,6 +1,4 @@
-package list;
-
-import java.util.ListResourceBundle;
+package structrue_ch3.list;
 
 class ListNodeChar {
     char val;
@@ -17,7 +15,7 @@ public class PalindromeList {
         if (head == null || head.next == null) {
             return true;
         }
-        //find the middle node of list
+        //find the middle node of structrue_ch3.list
         ListNodeChar fast = head;
         ListNodeChar slow = head;
         while (fast.next != null && fast.next.next != null) {

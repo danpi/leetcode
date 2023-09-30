@@ -1,4 +1,4 @@
-package list;
+package structrue_ch3.list;
 
 public class ReverseList {
     public ListNode reverse(ListNode head) {

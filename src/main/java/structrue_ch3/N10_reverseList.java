@@ -4,6 +4,16 @@ import common.ListNode;
 
 //https://leetcode.cn/problems/reverse-linked-list/
 public class N10_reverseList {
+    public ListNode reverseList(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        ListNode newHead = reverseList(head.next);
+        head.next.next = head;
+        head.next = null;
+        return newHead;
+    }
+
     //迭代
     //https://leetcode.cn/problems/reverse-linked-list/
     ListNode reverseIter(ListNode head) {
@@ -22,10 +32,10 @@ public class N10_reverseList {
         if (head == null || head.next == null) {
             return head;
         }
-        ListNode last = reverse(head.next);
-        head.next.next = head;
-        head.next = null;
-        return last;
+        ListNode newHead = reverse(head.next);  //尾节点作为反转后的头结点，不需要操作，一直返回即可。
+        head.next.next = head;  //添加当前节点的反向指针
+        head.next = null;   //消除之前的指针
+        return newHead;
     }
 
     //https://leetcode.cn/problems/reverse-linked-list-ii/

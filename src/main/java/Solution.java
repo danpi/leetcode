@@ -10,22 +10,65 @@ import java.util.*;
  */
 
 public class Solution {
-
-    public List<List<String>> groupAnagrams(String[] strs) {
-        if (strs == null || strs.length == 0) {
-            return new ArrayList<>();
+    public boolean isPalindrome(ListNode head) {
+        ListNode slow = head, fast = head;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
         }
-        Map<String, List<String>> map = new HashMap<String, List<String>>();
-        for (String str : strs) {
-            char[] chars = str.toCharArray();
-            Arrays.sort(chars);
-            String key = String.valueOf(chars);
-            if (!map.containsKey(key)) {
-                map.put(key, new ArrayList<String>());
+        ListNode left = head;
+        ListNode right = reverse(slow);
+        while (right != null) {
+            if (left.val != right.val) {
+                return false;
             }
-            map.get(key).add(str);
+            left = left.next;
+            right = right.next;
         }
-        return new ArrayList<>(map.values());
+        return true;
+    }
+
+    ListNode reverse(ListNode head) {
+        ListNode cur = head, pre = null;
+        while (cur != null) {
+            ListNode next = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = next;
+        }
+        return pre;
+    }
+
+    public boolean hasCycle(ListNode head) {
+        ListNode slow = head, fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow == fast) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public ListNode detectCycle(ListNode head) {
+        ListNode slow = head, fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow == fast) {
+                break;
+            }
+        }
+        if (fast == null || fast.next == null) {
+            return null;
+        }
+        slow = head;
+        while (fast != slow) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+        return slow;
     }
 
     public static void main(String[] args) {

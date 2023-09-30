@@ -1,25 +1,25 @@
-#ch1  
-###回溯 backtrack 
+# ch1  
+### 回溯 backtrack 
 Permute 全排列
 1. letterCombinations 电话号码的字母组合
 2. 组合总和 List<List<Integer>> combinationSum(int[] candidates, int target)
 3. 单词搜索 boolean exist(char[][] board, String word)
-###bfs
+### bfs
 minDepth 二叉树的最小深度  
 OpenLock 打开转盘锁
-###双指针
-HasCycle 环形链表  
-DetectCycle 环形链表二  
+### 双指针
+HasCycle 环形链表（仅判断是否有环）
+DetectCycle 环形链表二(找到开始入环的第一个节点)
 GetKthFromEnd 链表中倒数第k个节点
 1. moveZeroes 移动零
 2. maxArea 盛最多水的容器
 
-###滑动窗口
+### 滑动窗口
 checkInclusion 字符串的排列（s1的排列之一是s2的子串）  
 findAnagrams 找到字符串中的所有字母异位词  
 lengthOfLongestSubstring 无重复字符的最长子串  
 minWindow 最小覆盖子串  
-#ch2 动态规划
+# ch2 动态规划
 1. lengthOfLIS 最长递增子序列
 2. maxEnvelopes 俄罗斯套娃信封问题
 3. maxSubArray 连续子数组的最大和
@@ -40,7 +40,7 @@ minWindow 最小覆盖子串
 18. rob 打家劫舍
 19. rob 打家劫舍2（围成一圈）
 20. rob 打家劫舍3（二叉树）
-#ch3
+# ch3
 1. LRUCache LRU缓存
 2. LFUCache LFU缓存
 3. insertIntoBST 二叉搜索树的插入操作
@@ -50,9 +50,14 @@ minWindow 最小覆盖子串
 7. nextGreaterElements 下一个更大元素（单调栈）dailyTemperatures 每日温度（单调栈）
 8. maxSlidingWindow 单调队列解决滑动窗口问题
 9. isPalindrome 判断链表是否为回文链表
-10. reverseList 反转链表
+10. reverseList 反转链表（迭代和递归两种）
 11. reverseKGroup K个一组反转链表
-#ch4
+## 链表
+1. getIntersectionNode 相交链表(返回两个链表相交的起始节点)  
+2. mergeTwoLists 合并两个有序链表
+3. addTwoNumbers 两数相加（逆序存储，返回和的链表）
+4. removeNthFromEnd 删除链表的倒数第 N 个结点
+# ch4
 ###回溯 backtrack
 1. subsets子集 ； permute全排列 ； combine组合
 2. isValidSudoku 有效的数独 ； solveSudoku 解数独
@@ -64,7 +69,7 @@ minWindow 最小覆盖子串
 8. pancakeSort 煎饼排序翻转
 9. maxSubArray 最大子数组和
 10. NestedIterator 扁平化嵌套列表迭代器
-#ch5
+# ch5
 1. countPrimes 素数的数量
 2. superPow 超级次方
 3. minEatingSpeed 爱吃香蕉的猩猩
