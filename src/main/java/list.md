@@ -1,28 +1,37 @@
-# ch1  
-### 回溯 backtrack 
+# ch1
+
+### 回溯 backtrack
+
 Permute 全排列
+
 1. letterCombinations 电话号码的字母组合
 2. 组合总和 List<List<Integer>> combinationSum(int[] candidates, int target)
 3. 单词搜索 boolean exist(char[][] board, String word)
+
 ### bfs
+
 minDepth 二叉树的最小深度  
 OpenLock 打开转盘锁
+
 ### 双指针
-HasCycle 环形链表（仅判断是否有环）
-DetectCycle 环形链表二(找到开始入环的第一个节点)
-GetKthFromEnd 链表中倒数第k个节点
+
+HasCycle 环形链表（仅判断是否有环）【一遍过】 DetectCycle 环形链表二(找到开始入环的第一个节点)【一遍过】 GetKthFromEnd 链表中倒数第k个节点【一遍过】
+
 1. moveZeroes 移动零
 2. maxArea 盛最多水的容器
 
 ### 滑动窗口
+
 checkInclusion 字符串的排列（s1的排列之一是s2的子串）  
 findAnagrams 找到字符串中的所有字母异位词  
 lengthOfLongestSubstring 无重复字符的最长子串  
-minWindow 最小覆盖子串  
+minWindow 最小覆盖子串
+
 # ch2 动态规划
+
 1. lengthOfLIS 最长递增子序列
 2. maxEnvelopes 俄罗斯套娃信封问题
-3. maxSubArray 连续子数组的最大和
+3. maxSubArray 连续子数组的最大和【过】
 4. xx
 5. longestCommonSubsequence 最长公共子序列
 6. minDistance 编辑距离
@@ -40,7 +49,9 @@ minWindow 最小覆盖子串
 18. rob 打家劫舍
 19. rob 打家劫舍2（围成一圈）
 20. rob 打家劫舍3（二叉树）
+
 # ch3
+
 1. LRUCache LRU缓存
 2. LFUCache LFU缓存
 3. insertIntoBST 二叉搜索树的插入操作
@@ -49,16 +60,25 @@ minWindow 最小覆盖子串
 6. lowestCommonAncestor 二叉树的最近公共祖先
 7. nextGreaterElements 下一个更大元素（单调栈）dailyTemperatures 每日温度（单调栈）
 8. maxSlidingWindow 单调队列解决滑动窗口问题
-9. isPalindrome 判断链表是否为回文链表
-10. reverseList 反转链表（迭代和递归两种）
-11. reverseKGroup K个一组反转链表
+9. isPalindrome 判断链表是否为回文链表 【思路需要强化：找中点，然后reverse后半部分】
+10. reverseList 反转链表（迭代和递归两种）【递归一开始没有想起来】
+11. reverseKGroup K个一组反转链表【注意reverse前，先断开即将反转的链表】
+12. N12_AllOne 全 O(1) 的数据结构【map+双向链表+node中维护同频次的setList】
+
 ## 链表
-1. getIntersectionNode 相交链表(返回两个链表相交的起始节点)  
-2. mergeTwoLists 合并两个有序链表
-3. addTwoNumbers 两数相加（逆序存储，返回和的链表）
-4. removeNthFromEnd 删除链表的倒数第 N 个结点
+
+1. getIntersectionNode 相交链表(返回两个链表相交的起始节点)【没有思路：巧妙的while比较】
+2. mergeTwoLists 合并两个有序链表 【一遍过】
+3. addTwoNumbers 两数相加（逆序存储，返回和的链表）【思路简单，注意优化，一开始三个while循环可以优化为一个】
+4. removeNthFromEnd 删除链表的倒数第 N 个结点 【一遍过】
+5. swapPairs 两两交换链表中的节点 【一遍过】
+6. sortList 排序链表【没有思路：归并排序，注意断开左右两侧再递归】
+7. mergeKLists 合并 K 个升序链表【没有思路：L2的升级版，归并后两两进行排序】
+
 # ch4
-###回溯 backtrack
+
+### 回溯 backtrack
+
 1. subsets子集 ； permute全排列 ； combine组合
 2. isValidSudoku 有效的数独 ； solveSudoku 解数独
 3. isValid 有效括号 ； generateParenthesis 括号生成
@@ -69,9 +89,11 @@ minWindow 最小覆盖子串
 8. pancakeSort 煎饼排序翻转
 9. maxSubArray 最大子数组和
 10. NestedIterator 扁平化嵌套列表迭代器
+
 # ch5
+
 1. countPrimes 素数的数量
-2. superPow 超级次方
+2. superPow 超级次方 （N12_addStrings 大数相加，相乘）
 3. minEatingSpeed 爱吃香蕉的猩猩
 4. shipWithinDays 船在D天内送达包裹的能力
 5. removeDuplicates 删除有序数组中的重复项； deleteDuplicates删除排序链表中的重复元素
@@ -80,7 +102,61 @@ minWindow 最小覆盖子串
 8. eraseOverlapIntervals 无重叠区间（需要移除区间的最小数量）；findMinArrowShots 用最少数量的箭引爆气球
 9. trap 接雨水
 10. ExamRoom 考场就座
+
 ### hash
+
 11. longestConsecutive 最长连续序列（未排序数组）
 12. groupAnagrams 字母异位词分组（[["bat"],["nat","tan"],["ate","eat","tea"]]）
-13. 
+
+# hot100
+
+## N5_普通数组
+1. int[][] merge(int[][] intervals) 合并区间（有思路）
+2. rotate(int[] nums, int k) 轮转数组（反转）
+3. productExceptSelf(int[] nums) 除自身以外数组的乘积（左右边界数组）
+4. firstMissingPositive(int[] nums) 缺失的第一个正数（交换）
+
+## N6_矩阵
+
+## N7_链表
+
+## N8_二叉树
+1. inorderTraversal(TreeNode root) 二叉树的中序遍历【递归简单；迭代的需要再看一下】
+2. maxDepth(TreeNode root) 二叉树的最大深度【过】
+3. invertTree(TreeNode root) 翻转二叉树【过】
+4. isSymmetric(TreeNode root) 对称二叉树【过】
+5. diameterOfBinaryTree(TreeNode root) 二叉树的直径【过】
+6. levelOrder(TreeNode root) 二叉树的层序遍历【过】 
+7. sortedArrayToBST(int[] nums) 将有序数组转换为二叉搜索树【过】
+8. isValidBST(TreeNode root) 验证二叉搜索树【过】
+9. kthSmallest(TreeNode root, int k) 二叉搜索树中第K小的元素【利用迭代中序遍历】
+10. rightSideView(TreeNode root) 二叉树的右视图【过】
+11. flatten(TreeNode root) 二叉树展开为链表【有点磕磕绊绊】
+12. buildTree(int[] preorder, int[] inorder)  从前序与中序遍历序列构造二叉树【再写】
+13. pathSum(TreeNode root, int targetSum) 路径总和 III【前缀和，挺难想的】
+14. xx
+15. maxPathSum(TreeNode root) 二叉树中的最大路径和【前缀和，有点难】
+
+
+
+
+
+
+
+
+
+
+
+## N9_图论
+
+## N10_回溯
+
+## N11_二分查找
+
+## N12_栈
+
+## N13_堆
+
+## N14_贪心
+
+## N15_动规

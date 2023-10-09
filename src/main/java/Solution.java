@@ -1,4 +1,5 @@
 import concurrent.printnumber.ZeroEvenOdd;
+
 import java.util.*;
 
 /**
@@ -10,6 +11,13 @@ import java.util.*;
  */
 
 public class Solution {
+    //// 设计一个数据结构（也可以认为是一个类），有这四个方法
+    //inc(String key) // key 对应的 value +1；如果 key 不存在则从 0 开始 +1
+    //dec(String key) // key 对应的 value -1; 如果 value 减到 0 则把 key 删掉
+    //getMax() // 返回当前 value 最大的 key
+    //getMin() // 返回当前 value 最小的 key
+
+
     public boolean isPalindrome(ListNode head) {
         ListNode slow = head, fast = head;
         while (fast != null && fast.next != null) {

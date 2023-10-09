@@ -2,6 +2,8 @@ package structrue_ch3;
 
 import common.ListNode;
 
+import java.util.List;
+
 /**
  * 找到k的start和end，执行n/k轮即可，注意最后直接返回即可（添加dummy节点）
  */
