@@ -1,8 +1,6 @@
-package hot100.Sub8_tree;
+package hot100.Sub8_树;
 
 import common.TreeNode;
-
-import java.util.PrimitiveIterator;
 
 /**
  * hot100.Sub8_tree

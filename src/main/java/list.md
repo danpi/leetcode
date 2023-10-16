@@ -104,21 +104,44 @@ minWindow 最小覆盖子串
 10. ExamRoom 考场就座
 
 ### hash
-
 11. longestConsecutive 最长连续序列（未排序数组）
 12. groupAnagrams 字母异位词分组（[["bat"],["nat","tan"],["ate","eat","tea"]]）
 
 # hot100
+## Sub1_Hash
+1. twoSum(int[] nums, int target) 两数之和【过】
+2. groupAnagrams(String[] strs) 字母异位词分组【再看】
+3. longestConsecutive(int[] nums) 最长连续序列【再看】
 
-## N5_普通数组
-1. int[][] merge(int[][] intervals) 合并区间（有思路）
-2. rotate(int[] nums, int k) 轮转数组（反转）
-3. productExceptSelf(int[] nums) 除自身以外数组的乘积（左右边界数组）
-4. firstMissingPositive(int[] nums) 缺失的第一个正数（交换）
+## Sub2_双指针
+1. moveZeroes(int[] nums) 移动零【过】
+2. maxArea(int[] height) 盛水最多的容器【再看】
+3. threeSum(int[] nums) 三数之和【再写】
+4. trap(int[] height) 接雨水【思路简单，再写】
 
-## N6_矩阵
+## Sub3_滑动窗口
+1. lengthOfLongestSubstring(String s) 无重复字符的最长子串【过】
+2. findAnagrams(String s, String p) 找到字符串中所有字母异位词【思路简单，再写】
 
-## N7_链表
+## Sub4_subString
+1. subarraySum(int[] nums, int k) 和为K的子数组【思路很难想，前缀和】
+2. maxSlidingWindow(int[] nums, int k) 滑动窗口最大值【再写，维护降序queue】
+3. minWindow(String s, String t) 最小覆盖子串【再写】
+
+## Sub5_普通数组
+1. maxSubArray(int[] nums) 最大子数组和【过】
+2. int[][] merge(int[][] intervals) 合并区间【有思路，再写】
+3. rotate(int[] nums, int k) 轮转数组【反转，一开始没有思路】
+4. productExceptSelf(int[] nums) 除自身以外数组的乘积【左右边界数组，再写】
+5. firstMissingPositive(int[] nums) 缺失的第一个正数【交换，再写】
+
+## Sub6_矩阵
+1. setZeroes(int[][] matrix) 矩阵置零【再写】
+2. spiralOrder(int[][] matrix) 螺旋矩阵【再写】
+3. xx
+4. searchMatrix(int[][] matrix, int target) 搜索二维矩阵2【Z字搜索，再写】
+
+## Sub7_链表
 
 ## N8_二叉树
 1. inorderTraversal(TreeNode root) 二叉树的中序遍历【递归简单；迭代的需要再看一下】
@@ -138,25 +161,65 @@ minWindow 最小覆盖子串
 15. maxPathSum(TreeNode root) 二叉树中的最大路径和【前缀和，有点难】
 
 
+## Sub9_图论
 
+## Sub10_回溯
+1. xx
+2. xx
+3. letterCombinations(String digits) 电话号码的字母组合【过】
+4. combinationSum(int[] candidates, int target) 组合总和
+5. xx
+6. exist(char[][] board, String word) 单词搜索
 
-
-
-
-
-
-
-
-## N9_图论
-
-## N10_回溯
 
 ## N11_二分查找
+1. searchInsert(int[] nums, int target) 搜索插入位置【过】
+2. searchMatrix(int[][] matrix, int target) 搜索二维矩阵【过】
+3. searchRange(int[] nums, int target) 在排序数组中查找元素的第一个和最后一个位置【二分找左右边界，再写】
+4. rotateSearch(int[] nums, int target) 搜索旋转排序数组【再写】
+5. findMin(int[] nums) 寻找旋转排序数组中的最小值【再写】
+6. findMedianSortedArrays(int[] nums1, int[] nums2) 寻找两个正序数组的中位数【未写】
 
 ## N12_栈
+1. bracketsIsValid 有效的括号【过】
+2. minStack 最小栈【再刷；一开始没想起来，但思路简单】
+3. decodeString(String s) 字符串解码【再刷；递归】
+4. dailyTemperatures(int[] temperatures) 每日温度【再刷；小顶栈，从右开始】
+5. largestRectangleArea(int[] heights) 柱状图中最大的矩形【再刷；大顶栈】
 
 ## N13_堆
+1. findKthLargest(int[] nums, int k) 数组中的第k个最大元素【再刷；快排思想改进，quickSelect】
+2. topKFrequent(int[] nums, int k) 前k个高频元素【再刷；map统计频次+优先级队列】
+3. MedianFinder 数据流的中位数【再刷；两个优先级队列，分别存放一般的值，left是大顶堆，right是小顶堆】
 
 ## N14_贪心
+1. maxProfit(int[] prices) 买卖股票的最佳时机【过】
+2. boolean canJump(int[] nums) 跳跃游戏【过，维护farthest】
+3. int jump(int[] nums) 跳跃游戏2【过，按层遍历】
+4. partitionLabels(String s) 划分字母区间【维护一个字母与最后位置的map，后续类似于跳跃2，看有多少层】
 
 ## N15_动规
+1. int climbStairs(int n) 爬楼梯【过】
+2. List<List<Integer>> generate(int numRows) 杨辉三角【过】
+3. int rob(int[] nums) 打家劫舍 【过】
+4. int numSquares(int n) 完全平方数 【需再看，思路简单】
+5. int coinChange(int[] coins, int amount) 零钱兑换 【硬币无限，经典再看】
+6. boolean wordBreak(String s, List<String> wordDict) 单词拆分【再看】
+7. int lengthOfLIS(int[] nums) 最长递增子序列 【经典再看】
+8. int maxProduct(int[] nums) 乘积最大子数组 【再看：思路简单，注意负数的处理】
+9. boolean canPartition(int[] nums) 分割等和子集 【需再看】
+10. int longestValidParentheses(String s) 最长有效括号 【再看：思路简单，注意数组越界】
+
+## Sub16_多维动归
+1. uniquePaths(int m, int n) 不同路径【过】
+2. minPathSum(int[][] grid) 最小路径和【过】
+3. longestPalindrome(String s) 最长回文子串【经典再写】
+4. longestCommonSubsequence(String text1, String text2) 最长公共子序列【过】
+5. minDistance(String word1, String word2) 编辑距离【过】
+
+## Sub17_技巧
+1. singleNumber(int[] nums) 只出现一次的数字【过】
+2. majorityElement2(int[] nums) 多数元素，众数【思路有趣，再写】
+3. sortColors(int[] nums) 颜色分类【再写】
+4. nextPermutation(int[] nums) 下一个排列【字典序，有实际用处，c++STL收录】
+5. findDuplicate(int[] nums) 寻找重复数【有趣的思路，判断链表有环的思路】

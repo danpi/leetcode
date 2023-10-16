@@ -1,4 +1,4 @@
-package hot100;
+package hot100.Sub5_普通数组;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,8 +13,26 @@ import java.util.List;
  * @date 2023/10/8
  */
 
-public class N5_Array {
+public class Sub5_Array {
     //1
+    //dp[i]：以i为结尾的最大和
+    public int maxSubArray(int[] nums) {
+        int n = nums.length;
+        int[] dp = new int[n];
+        dp[0] = nums[0];
+        int max = dp[0];
+        for (int i = 1; i < n; i++) {
+            dp[i] = Math.max(dp[i - 1] + nums[i], nums[i]);
+            max = Math.max(dp[i], max);
+        }
+        return max;
+
+    }
+
+    //2
+    //先排序，然后遍历排序后的数组
+    //L和R为i的区间，如果res的末尾右区间<L,将cur添加近res
+    //否则合并区间，res的末尾左侧不变，右侧=max(原右侧,R)
     public int[][] merge(int[][] intervals) {
         if (intervals.length == 0) {
             return new int[0][2];
@@ -38,7 +56,8 @@ public class N5_Array {
         return res.toArray(new int[res.size()][2]);
     }
 
-    //2
+    //3
+    //反转三次即可，(0,n-1) (0,k-1) (k,n-1)
     public void rotate(int[] nums, int k) {
         k %= nums.length;
         reverse(nums, 0, nums.length - 1);
@@ -56,7 +75,10 @@ public class N5_Array {
         }
     }
 
-    //3
+    //4 O(n)
+    //维护两个数组L，R
+    //L[i]是前i个数字乘积
+    //mul[i]=L[i]*R[i];
     public int[] productExceptSelf(int[] nums) {
         int n = nums.length;
         int[] L = new int[n];
@@ -91,7 +113,10 @@ public class N5_Array {
         return ans;
     }
 
-    //4
+    //5
+    //对数组进行恢复，[3, 4, -1, 1]恢复后为 [1, -1, 3, 4]
+    //数字x=1，应该在数组第一个位置上，即1=num[0] ===> num[num[i]-1]==num[i]
+    //遍历恢复后的数组，第一个不符合预期的值就是缺失的
     public int firstMissingPositive(int[] nums) {
         int n = nums.length;
         for (int i = 0; i < n; i++) {
