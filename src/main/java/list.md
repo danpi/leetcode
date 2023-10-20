@@ -110,23 +110,23 @@ minWindow 最小覆盖子串
 # hot100
 ## Sub1_Hash
 1. twoSum(int[] nums, int target) 两数之和【过】
-2. groupAnagrams(String[] strs) 字母异位词分组【再看】
-3. longestConsecutive(int[] nums) 最长连续序列【再看】
+2. groupAnagrams(String[] strs) 字母异位词分组【再看;过】
+3. longestConsecutive(int[] nums) 最长连续序列【再看;过】
 
 ## Sub2_双指针
-1. moveZeroes(int[] nums) 移动零【过】
-2. maxArea(int[] height) 盛水最多的容器【再看】
-3. threeSum(int[] nums) 三数之和【再写】
-4. trap(int[] height) 接雨水【思路简单，再写】
+1. moveZeroes(int[] nums) 移动零【过；过】
+2. maxArea(int[] height) 盛水最多的容器【再看;过；过】
+3. threeSum(int[] nums) 三数之和【再写；过；过】
+4. trap(int[] height) 接雨水【思路简单，再写；过；过】
 
 ## Sub3_滑动窗口
-1. lengthOfLongestSubstring(String s) 无重复字符的最长子串【过】
-2. findAnagrams(String s, String p) 找到字符串中所有字母异位词【思路简单，再写】
+1. lengthOfLongestSubstring(String s) 无重复字符的最长子串【过；过】
+2. findAnagrams(String s, String p) 找到字符串中所有字母异位词【思路简单，再写；过】
 
 ## Sub4_subString
-1. subarraySum(int[] nums, int k) 和为K的子数组【思路很难想，前缀和】
-2. maxSlidingWindow(int[] nums, int k) 滑动窗口最大值【再写，维护降序queue】
-3. minWindow(String s, String t) 最小覆盖子串【再写】
+1. subarraySum(int[] nums, int k) 和为K的子数组【思路很难想，前缀和；再看】
+2. maxSlidingWindow(int[] nums, int k) 滑动窗口最大值【再写，维护降序queue；过】
+3. minWindow(String s, String t) 最小覆盖子串【再写;过】
 
 ## Sub5_普通数组
 1. maxSubArray(int[] nums) 最大子数组和【过】
